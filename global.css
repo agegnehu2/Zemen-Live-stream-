@@ -1,0 +1,149 @@
+/* ============================================
+   ZEMEN — Design Tokens
+   Palette: signal-black base, ember broadcast accent,
+   a distinct alert-red reserved only for LIVE state.
+   Concept: satellite/broadcast — content radiating outward
+   from Ethiopia to the world. Signature: concentric "pulse"
+   rings on live indicators, referencing a transmitting signal.
+   ============================================ */
+
+:root {
+  --bg: #0A0A12;
+  --surface: #13131F;
+  --surface-raised: #1B1B2A;
+  --border: #262638;
+
+  --ember: #FF6B35;
+  --ember-deep: #D9501E;
+  --live: #FF3B4E;
+
+  --text: #F3F1EA;
+  --text-dim: #9694A8;
+  --text-faint: #5C5A70;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea { font-family: inherit; }
+
+::selection { background: var(--ember); color: #0A0A12; }
+
+:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Signature element: broadcast pulse ---------- */
+.pulse-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--live);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.pulse-dot::before,
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--live);
+  animation: pulse-ring 1.8s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+
+.pulse-dot::after { animation-delay: 0.6s; }
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(4.5); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot::before, .pulse-dot::after { animation: none; display: none; }
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 59, 78, 0.12);
+  border: 1px solid rgba(255, 59, 78, 0.3);
+  color: var(--live);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 4px 9px 4px 7px;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--ember);
+  color: #14100A;
+}
+.btn-primary:hover { background: #FF7D4E; transform: translateY(-1px); }
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--ember); }
+
+.input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+.input:focus { border-color: var(--ember); outline: none; }
