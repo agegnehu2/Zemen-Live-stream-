@@ -50,3 +50,13 @@ npm run dev              # runs on http://localhost:5173
 - Phase 4: Moderator dashboard UI for the `moderation_reports` queue
 
 Tell me which phase to build next.
+## About the Developer
+
+Built by **Agegnehu Shibiru** — a self-taught developer from Ethiopia, building full-stack 
+applications entirely from a mobile phone using AI-assisted development tools.
+
+- 🐙 GitHub: [github.com/agegnehu2](https://github.com/agegnehu2)
+- 📱 WhatsApp: +251 910 195 166
+- 📧 Email: agegnehushibiru5@gmail.com or agegnehushibiru7@gmail.com
+
+Open to collaboration, learning opportunities, and connecting with developers internationally.
