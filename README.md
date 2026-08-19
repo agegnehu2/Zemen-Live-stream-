@@ -1,3 +1,4 @@
+![Zemen Logo](./Zemen%20Live%20Stream.png)
 # Zemen — Full-Stack Live Streaming Platform
 
 Full-scale live streaming + VOD platform: Express + PostgreSQL + Socket.IO backend, React + Vite frontend.
