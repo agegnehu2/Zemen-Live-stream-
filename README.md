@@ -58,5 +58,5 @@ applications entirely from a mobile phone using AI-assisted development tools.
 - 🐙 GitHub: [github.com/agegnehu2](https://github.com/agegnehu2)
 - 📱 WhatsApp: +251 910 195 166
 - 📧 Email: agegnehushibiru5@gmail.com or agegnehushibiru7@gmail.com
-
+## https://pixels-snap-replay.lovable.app
 Open to collaboration, learning opportunities, and connecting with developers internationally.
